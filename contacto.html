@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<!-- de esta forma se pueden agregar comentarios en html 5 con css 3 -->
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Contacto - Barberia Alura</title>
+        <link rel="stylesheet" href="reset.css">  <!-- restea los estilos de muchas tag -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <header>
+            <div class="caja">
+
+                <h1><img src="imagenes/logo.png" alt="Logo de la Brbería Alura"></h1> 
+                                                <!-- alt es para indicar un texto alternativo a la imgagen -->            
+                <nav> <!-- incluido desde la version 5 permite navegar en opciones y diferenciar de otras listas y hacer referencia a las tag internas de su grupo -->
+                        <ul>
+                            <li><a href="index.html">Home</a></li>     <!-- hace referencia a la pagina principal-->
+                            <li><a href="productos.html">Productos</a></li>
+                            <li><a href="contactos.html">Contactos</a></li>
+                        </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            
+            <form>
+                <label for="nombreapellido">Nombre y Apellido</label>
+                <input type="text" id="nombreapellido" class="input-padron" required>  <!--crea una caja de texto y se identifica con el id.   required obliga a q se llene el campo con el dato solicitado -->
+            
+                <label for="correoelectronico">Correo Electrónico</label>
+                <input type="email" id="correoelectronico" class="input-padron" required placeholder="email@dominio.com">
+
+                     <!-- type="email"  hace q el ingreso espere un dato de correo -->
+                     <!-- placeholder muestra un ejemplo del dato esperado-->
+
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" class="input-padron" required placeholder="(+XX) XXXX XX XXX">
+                     <!-- type="tel"espera q el dato sea de tipo formato numero de telefono  --> 
+
+                <label for="mensaje">Mensaje</label>
+                <textarea cols="70" rows="10" id="mensaje" class="input-padron" required></textarea> <!-- crea una caja de texto grande -->
+
+                <!-- <div> Se reemplaza div por fielset es mejor para indicar que los elementos que siguien se refieren al mismo dato  -->
+                <fieldset>
+
+                    <!-- para probar  esta linea no se ejecuta -->
+                    <!-- <p class="test" id="test" >Cómo le gustaría que lo contactemos?</p> -->
+
+                    <!-- la etiqueta <p> se reemplaza por legend por que fieldset funciona con esta tag -->
+                    <!-- <p>¿Cómo le gustaría que lo contactemos?</p>  -->
+                    <legend> ¿Cómo le gustaría que lo contactemos?</legend>
+
+                    <label for="radio-email"><input type="radio" name="Contacto" value="email" id="radio-email">Email</label>
+                    
+                            <!-- type="radio" hace q solo se pueda selecionar solo una opcion -->
+                            <!-- name="identificador" agrupa con las opciones con el mismo nombre -->
+                            <!-- value="identificador" es el nombre de la opcion q se ve en pantalla -->
+        
+                    <label for="radio-telefono"><input type="radio" name="Contacto" value="telefono" id="radio-telefono">Teléfono</label>
+                      
+                    <label for="radio-whatsapp"><input type="radio" name="Contacto" value="whatsapp" id="radio-whatsapp" checked>Whatsapp</label>
+                                      <!-- checked deja preseleccionado una opcion -->
+                <!-- </div>  se reemplaza po </fieldset> -->
+                
+                </fieldset>
+
+                <fieldset> <!-- reemplaza a div-->
+                    <legend>¿En cuál horario prefiere ser atendido?</legend> <!-- reemplaza a <p> -->
+                    <select>
+                        <option>Mañana</option>
+                        <option>Tarde</option>
+                        <option>Noche</option>
+                    </select>
+
+                </fieldset>
+
+                <label class="checkbox"><input type="checkbox" checked>¿Le gustaría recibir novedades de la Barbería?</label>  <!-- checked deja preseleccionado una opcion -->
+
+                <input type="submit" value="Enviar formulario" class="enviar" >  <!-- coloca el boton "enviar" -->
+      
+            </form>
+        <!--
+             Esto es una manera basica de tablas 
+
+           <table>  -- Tabla tipo excel--
+                    
+                    <tr> -- filas 
+                        <td>Día</td>  -- columna --
+                        <td>Horario</td>
+                    </tr>
+                    <tr>
+                        <td>Lunes</td>
+                        <td>08h - 20h</td>
+                    </tr>
+                    <tr>
+                        <td>Miércoles</td>
+                        <td>08h - 20h</td>
+                    </tr><tr>
+                        <td>Viernes</td>
+                        <td>08h - 20h</td>
+                    </tr>
+            </table>
+        -->
+
+        <!-- para mantener estructura de codigo  y buenas practicas de programacion 
+         y continuar con la forma de dividir por seciones el codigo para un mejor
+        orden y entendimiento se usa thead, th, tbody para crear tablas -->
+
+            <table>    <!-- Tabla tipo excel-->
+                
+                <thead>
+                    <tr>   <!-- filas -->
+                        <th>Día</th>    <!-- columna con <th> -->
+                        <th>Horario</th>
+                    </tr>
+
+                </thead>
+                
+                <tbody>
+                    <tr>
+                        <td>Lunes</td>
+                        <td>08h - 20h</td>
+                    </tr>
+                    <tr>
+                        <td>Miércoles</td>
+                        <td>08h - 20h</td>
+                    </tr><tr>
+                        <td>Viernes</td>
+                        <td>08h - 20h</td>
+                    </tr>
+                </tbody>
+            </table>  
+        </main>
+        <footer>
+            <img src="imagenes/logo-blanco.png" alt="Logo de la Barbería Alura">
+            <p class="copyright">&reg Copyright Barbería Alura - 2024</p> <!-- el &copy es caracter especial de copyright */ -->
+
+        </footer>
+    </body>
+</html>

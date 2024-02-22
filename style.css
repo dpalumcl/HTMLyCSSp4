@@ -1,0 +1,469 @@
+
+/* esto es un comentario en  archivos de estilos */ 
+
+
+
+body{
+      font-family: "Montserrat", sans-serif;
+/*    font-optical-sizing: auto;
+      font-weight: 300;
+      font-style: normal;
+*/
+}
+    
+header{
+    background-color: #BBBBBB;
+    padding: 20px 0;
+}
+
+.caja{
+
+    width: 940px;
+    position: relative;
+    margin: 0 auto;
+}
+
+
+nav{
+    position: absolute;
+    top: 110px;
+    right: 0px;
+
+
+}
+nav li{  /* aqui se usa nav<> y la sub tag li */
+    display: inline;
+    margin: 0 0 0 15px; /* margin tiene 4 parametros */
+           /* arriba, derecha, abajo, izquierda */
+           
+ }
+
+nav a{  /* aqui se referencia a la sib tag a que esta dentro  de nav<> */
+
+    text-transform: uppercase; /* deja todas las letras en mayusculas */
+    color: #000000;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+
+}
+
+nav a:hover{   /* permite capturar la accion de mouse */
+    color: #c78c19;
+    text-decoration: underline;
+    /* con esto cambia el colo y subraya el menu cuando pasa el mouse*/
+}
+
+.productos{
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.productos li{
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    /* background: #CCCCCC; */
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+
+ /*  forma extendida 
+    border-color: #000000;
+    border-width: 2px;
+    border-style: solid;
+    */
+
+    /* forma resumida de lo mismo */ 
+    border: 2px solid #000000;
+         /* width style color */
+    
+    /*
+    border-top-left-radius: 10px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 40px;
+    border-bottom-left-radius: 50px;
+    */
+    /* la forma resumen 
+
+    border-radius: 10px 25px 40px 50px;
+*/
+    border-radius: 10px; /* si van ser los 4 iguales se declara uno */
+}
+
+.productos li:hover{     /* con esto cambia el color de los borde de lista de servicios */
+    border-color: #c78c19;
+
+    .producto-precio{ /* por probar; cambia el color del precio solo al pasar
+                       por encima del cuadro con el mouse */
+        color: blue;
+    }
+
+}
+
+.productos li:active{ /* detecta el click sobre algun cuadro de servicios y cambia el color del borde a verde  */
+
+    border-color: #088c19;
+    /* font-size: 33px;   esta linea no afecta por q la etiqueta q manda es h2*/
+
+    .producto-precio { /* mi linea agregada; cambia el color del precio al hacer click sobre el cuadro*/
+
+        color: red;
+    }   /* es una classa llamada dentro de otra classe */
+
+}
+.productos h2{
+    font-size:  30px;
+    font-weight: bold;
+
+}
+
+.productos li:hover h2{  /* aqui si afecta y se da el efecto esperado */
+    font-size:  33px;
+}
+
+.producto-desripcion{
+    font-size: 18px;
+
+}
+
+.producto-precio{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+footer{
+    text-align: center;
+    /* background: #CCCCCC;   deja fondo gris */
+    background: url(imagenes/bg.jpg);
+    padding: 40px; /* le da un espaciado entre los bordes */
+}
+
+.copyright{
+    color: white;
+    font-size: 13px;
+    margin: 20px;
+}
+
+/*
+   esto no se ocupará aqui en main, se copia en los otros bloques come el .principal
+
+  main{
+    width: 940px;  /* valor de uso comun para centralizar algun objeto en pantalla 
+    margin: 0 auto;  
+}
+*/
+
+form{
+    margin: 40px 0;
+}
+
+form label, form legend{  /* p es reemplazado por legend */              
+    display: block; /* estas lineas centraliza en forma vertical las nombre de los cuadro de texto*/
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+/* este codigo se reemplaza por el q sigue  
+form input, form textarea{ /* se puede aplicar estilo a varias areas separadas por coma */
+  /*  display: block;  /* centraliza lasl cajas de texto */
+   /* margin: 0 0 20px;
+    padding: 10px 25px;
+    width: 50%;
+}                        
+*/
+
+.input-padron{ /* se reemplaza por que ahora se usa llas llamadas  clases */
+     display: block;  /* centraliza lasl cajas de texto */
+     margin: 0 0 20px;
+     padding: 10px 25px;
+     width: 50%;
+  }   
+
+  .checkbox{
+    margin: 20px 0;
+  }
+
+  /* esto es una prueba
+  form p{
+
+    color: blue;
+  }
+
+  p{
+
+    color: red;
+  }
+
+  .test{
+    color: yellow;
+  }
+*/  
+
+.enviar{           /* se le da estilo al boton enviar  */
+    width: 40%;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: orange;
+    border: none;
+    border-radius: 5px;
+    /* transition: 1s background; solo afecta al fondo del boton */
+    transition: 1s all; /* afecta a todos los parametros del boton */
+    cursor:pointer;
+}
+
+.enviar:hover{     /* si pasa el raton cambia de color el boton */
+    background: darkorange;
+    transform: scale(1.2);
+    
+    /* transform: scale(1.2) rotate(70deg); esto amplia el boton y lo rota*/
+
+    /*permite cambiar el tamaño del boton y rota 70grad. se escribe en la misma linea 
+    porque de otra forma solo aplica el ultimo efecto de transform, se puede desde css 3 */
+    
+    /* transform: rotate(70deg);*/ 
+}
+
+table {  /* le da una posicion con cierto margen */
+    margin: 40px 40px;
+}
+
+thead{    /* color de fondo de cabecera de tabla y celdas */
+    background: #555555; 
+    color: white;
+    font-weight: bold;
+}
+
+td,th{   /* dibuja las lineas de la tabla */
+    border: 1px solid #000000;
+    padding: 8px 8px; /* le da un espaciado interno en las celdas */
+}
+
+/* aqui inicia  css para nuestra pagina home  */
+
+.banner{
+    width: 100%;
+}
+
+/*
+    * este son ejemplos para usar CSS en forma mas especifico *
+
+    main > p{       * indica que solo afecte a los p hijos de main *
+        background: red;
+    }
+
+    img + p{   * selecciona un parrafo que viene despues de la imagen *
+        background: yellow;
+    } 
+
+    img ~ p{  * aplica todos los p despues de la imagen  *
+        background: green;
+        }
+
+
+    .principal p:not(#mision){   * aplica a todos los p dentro de principal Menos a al id mision *
+        background: orange;
+    }
+
+*/
+
+
+
+
+.principal{
+    padding: 3em;
+    background: #FEFEFE;
+    width: 940px;  /* valor de uso comun para centralizar algun objeto en pantalla */
+    margin: 0 auto;  
+}
+
+.titulo-principal{
+    text-align: center;
+    font-size: 2em;  /* multiplica por 2 el tamaño de fuente por defecto del navegador*/
+    margin: 0 0 1em;
+    clear: left;
+    /*  color: rgb(0,0,0,); /*otra forma de colocar color con rgb */
+    
+    /* color: rgba(218,0,0,0.3)  /* otra forma con rgba aqui el cuarto dato es la opacidad  */
+
+    /* text-shadow: 2px 2px 10px red;   otra forma de sombrear un texto */
+
+}
+
+/* ejemplo de aplicar pseudo-clases
+
+.titulo-principal::first-letter{
+    font-weight: bold;  /* no se aplica no se porque  
+    font-style: italic;
+}
+
+.titulo-principal::before{
+    content: "[";
+
+}
+
+.titulo-principal::after{
+    content: "]";
+
+}
+
+
+p::first-line{
+
+    font-style: italic;
+
+}
+*/
+
+
+.principal p{
+    margin: 0 0 1em;
+}
+
+.principal strong{
+    font-weight: bold; 
+
+}
+
+.principal em{
+    font-style: italic;
+}
+
+.utensilios{
+    width: 120px;
+    float: left;  /* hace "flotar la imagen */
+    margin: 0 20px 20px 0; 
+}
+
+.mapa{
+    padding: 3em 0;
+    background: linear-gradient(#FEFEFE,#888888)  /* esto aplica color definitivo en degradado */
+    
+    /* background: linear-gradient(orange,blue)   esto aplica colore en degradado */
+
+    /* background: linear-gradient(orange,blue,red,black)  /* esto aplica colore en degradado */
+    /* background: linear-gradient(45deg,orange,blue,red,black)  /* esto aplica colore en degradado con angulo de 45º */
+    /* background: linear-gradient(45deg,orange 50%,blue,red,black)  /* esto aplica colore en degradado con angulo de 45º y el naranjo ocupe el 50%  */
+    /* background: radial-gradient(orange,blue,red,black)  /* esto aplica color en degradado en forma circular */
+}
+
+.mapa p{
+    margin: 0 0 2em;
+    text-align: center;
+}
+
+.mapa-contenido{
+    width: 940px;
+    margin: 0 auto;
+}
+
+.diferenciales{
+    padding: 3em;
+    background: #888888;
+
+  /*
+    box-shadow: inset 0 0 30px red;  
+    forma de sombrear interna en el area del texto de diferenciales usando el parametro inset q sombrea hacia dentro del objeto */
+    
+
+}
+
+.contenido-diferenciales{
+    width: 640px;
+    margin: 0 auto;
+
+}
+
+.lista-diferenciales{
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.items{
+    line-height: 1.5;
+}
+
+.items::before{
+    content: "*";
+}
+
+.items:first-child{ 
+    font-style: italic;  /* si funciona */
+    font-weight: bold;  /* no toma no se porque  */
+    
+}  
+.items:nth-child(1){
+    font-weight: bold;
+}
+/* para el primer elemento de este item lo pinta de negro */
+
+/*
+.items:last-child{     se supone que con esta opcion se remarca el ultimo items
+    font-weight: bold;
+}
+
+.items:nth-child(2n){   otra forma que permite pintar las opciones pares  
+    font-weight: bold;
+}
+*/
+
+.imagen-diferenciales{
+    width: 60%;
+   /* opacity: 3%;  /* administra en q porcentje la imagen es visible o no  */
+   transition: 400ms; /* genera una pausa que afecta al efecto de opacity al pasar el cursor */
+    box-shadow: 10px 10px 30px 15px #000000;  /* en css3 esto permite dibujar una sombra alrededor de la imgen  */
+    /* los valores: abajo derecha difumado expansion color nota: no es necesario todos los parametros  */
+    /* si los valores  box-shadow: -10px -10px...  en negativo, dibuja la sombra al lado contrario */
+   
+  /*  box-shadow: 10px 10px 30px 15px #000000, -10px -10px yellow, -15px 10px rgba(50,50,50,0.5);
+   forma de colocar dos o mas sombras separados por coma   */
+
+}
+   
+.imagen-diferenciales:hover{   /* cuando pasa el cursor sobre la imagen su opacidad cambia */
+    opacity: 0.3;     
+}
+
+.video{
+    width: 560px;
+    margin: 1em auto;
+}
+
+/*  media queries  se pueden definir como ecepciones */
+/* por ejemplo: la pagina fue construida con valores para pantallas grandes 
+   pero no se contempló las celulares y otros dispositivos y ha usado medidas
+   constantes de pantalla como el valor 940 en varias parte del codigo.  para no 
+   modificar el codigo se puede usar las ecepciones  */
+
+@media screen and (max-width:480px){  /* ej si encuentra una pantalla de hasta 480px
+                                         pinta el fondo de rojo el <body>  
+    body{
+        background: red;
+    }
+        */
+
+    /* con esto se aplica a todas las secciones de la pagina un cambio para 
+       que se ajuste a la pantallas de hata 480px  
+      */        
+    h1{    
+        text-align: center;
+    }
+    nav{
+           position: static;
+    }
+
+    .caja, .principal,.mapa-contenido,.contenido-diferenciales,.video{
+        width: auto;
+    }
+
+    .lista-diferenciales, .imagen-diferenciales{
+        width: 100%;
+    }
+}
+

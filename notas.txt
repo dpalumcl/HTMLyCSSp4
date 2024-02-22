@@ -1,0 +1,2 @@
+en esta parte, los archivos de style se renombraro de style a style-home  que aplica a index.html
+y productos.css pasa a ser la style.css principal que se ocupa en productos.html y contactos.html

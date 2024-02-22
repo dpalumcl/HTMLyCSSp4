@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<!-- de esta forma se pueden agregar comentarios en html 5 con css 3 -->
+
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Productos - Barberia Alura</title>
+        <link rel="stylesheet" href="reset.css">  <!-- restea los estilos de muchas tag -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <header>
+
+            <div class="caja">
+
+                <h1><img src="imagenes/logo.png"></h1> 
+                <nav> <!-- incluido desde la version 5 permite navegar en opciones y diferenciar de otras listas y hacer referencia a las tag internas de su grupo -->
+                        <ul>
+                            <li><a href="index.html">Home</a></li>     <!-- hace referencia a la pagina principal-->
+                            <li><a href="productos.html">Productos</a></li>
+                            <li><a href="contactos.html">Contactos</a></li>
+                        </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <ul class="productos">
+                <li>
+                    <h2>Cabello</h2>    
+                    <img src="imagenes/cabello.jpg">
+                    <p class="producto-desripcion">Con tijeras o máquinas, a gusto del cliente</p>
+                    <p class="producto-precio">$ 10.00</p>
+                </li>
+                <li>
+                    <h2>Barba</h2>    
+                    <img src="imagenes/barba.jpg">
+                    <p class="producto-desripcion">Corte y diseño profesional de barba</p>
+                    <p class="producto-precio">$ 08.00</p>
+                    
+                    </li>     
+                <li>
+                    <h2>Cabello + Barba</h2>    
+                    <img src="imagenes/cabello+barba.jpg">
+                    <p class="producto-desripcion">Paquete completo de cabello y barba</p>
+                    <p class="producto-precio">$ 15.00</p>
+
+                </li>
+            </ul>
+        </main>
+        <footer>   <!-- pie de pagina -->
+            <img src="imagenes/logo-blanco.png">
+            <p class="copyright">&reg Copyright Barbería Alura - 2024</p> <!-- el &copy es caracter especial de copyright -->
+
+        </footer>
+    </body>
+
+</html>

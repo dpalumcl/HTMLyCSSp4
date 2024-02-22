@@ -1,0 +1,136 @@
+<!DOCTYPE html> 
+
+<!-- de esta forma se pueden agregar comentarios en html 5 con css 3 -->
+
+<!-- curso 4 -->
+
+<html lang="es">    <!-- es para indica en q idioma esta construido el html -->
+
+    <head>     <!-- etiquetas informativa -->
+        <meta charset="UTF-8">    <!-- esto hace q los navegadores reconozcan acentos -->
+        
+        <meta name="viewport" content="width=device-width">   
+         <!-- esta linea indica al navegador a adapte la pagina al dispositivo
+              como celular tablet etc   esto es parte de la idea de crear una pagina
+              de forma responsiva
+        -->
+
+
+        <title>Barbería Alura</title>
+        <link rel="stylesheet" href="reset.css"> <!-- 4to curso se agrea el reset de estilo-->
+        <link rel="stylesheet" href="style.css"> <!-- ahora se usa el mismo style de las otras paginas -->
+        
+<!-- las lineas siguientes es para incorporar las letras o fonts de Google del tipo montserrat -->
+<!-- al inluirlas, queda mas compatible para los distintos navegadores al usar letras externas publicas -->
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+<!--                   letras desde google fonts            -->
+
+    </head>
+    
+    <body>    <!-- todo lo que este dentro de esta tag es lo que se verá en la pagina -->
+       <!--  este header es reemplado por...
+             
+          <header>   -- se usa para indicar que es un encabezado --
+             <h1 class="titulo-prinicipal">Barbería Alura</h1>  -- con class se puede identificar para aplicar estilos --
+          </header>
+        -->
+        <header>  <!-- por este otro header copiado desde las otras paginas -->
+
+            <div class="caja">
+
+                <h1><img src="imagenes/logo.png"></h1> 
+                <nav> <!-- incluido desde la version 5 permite navegar en opciones y diferenciar de otras listas    y            hacer            referencia a las tag internas de su grupo -->
+                        <ul>
+                            <li><a href="index.html">Home</a></li>     <!-- hace referencia a la pagina principal-->
+                            <li><a href="productos.html">Productos</a></li>
+                            <li><a href="contactos.html">Contactos</a></li>
+                        </ul>
+                </nav>
+            </div>
+        </header>
+
+
+        <img class="banner" src="banner/banner.jpg">  
+        
+        <!-- esta tag o etiqueta img no tiene cierre porq es una referencia 
+            se reemplaza id por class. por lo general se usa id para alterar comportamiento class para alterar los estilos 
+        
+        -->
+        <main>
+
+        
+            <section class="principal">  <!-- se reemplaza div por section
+            
+            con esto se indica al navegador q contenido de la seccion tiene el mismo significado, el mismo sentido y se trata como un objeto 
+            -->
+
+                <h2 class="titulo-principal">Sobre la Barbería Alura</h2>  
+                <!-- se cambia el titulo por otro mas adecuado a su funcion-->
+
+                <img class="utensilios" src="imagenes/utensilios.jpg" alt="Utensilios de un barbero">
+    
+                <p>Ubicada en el corazón de la ciudad, la <strong>Barbería Alura</strong> trae para el mercado lo que hay de mejor para su cabello y barba. Fundada en 2020, la Barbería Alura ya es destaque en la ciudad y conquista nuevos clientes diariamente. </p>
+    
+                <p id="mision"><em>Nuestra misión es: <strong>"Proporcionar autoestima y calidad de vida a nuestros clientes".</strong></em></p>
+    
+                <p>Ofrecemos profesionales experimentados que están constantemente observando los cambios y movimiento en el mundo de la moda, para así ofrecer a nuestros clientes las últimas tendencias. El atendimiento posee un padrón de excelencia y agilidad, garantizando calidad y satisfacción de nuestros clientes. </p>
+            </section>
+
+            <section class="mapa">
+                <h3 class="titulo-principal">Nuestra Ubicación</h3>
+                <p>Nuestro establecimiento está ubicado en el corazón de la ciudad</p>
+
+                <div class="mapa-contenido">  <!-- dejamos el mapa dentro de div para mayor control y aplicacion de estilos-->
+                    <!-- aqui se incopora el mapa desde google maps -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.4288410024965!2d-46.63606528902529!3d-23.588948378692418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5a2b2ed7f3a1%3A0xab35da2f5ca62674!2sCaelum%20-%20Education%20and%20Innovation!5e0!3m2!1ses-419!2scl!4v1707837592653!5m2!1ses-419!2scl" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    <!-- <iframe </iframe> esto permite incluir una ventana con algun tipo de medio  -->
+
+                </div>
+            </section>
+            
+            <section class="diferenciales">
+    
+                <h3 class="titulo-principal">Diferenciales</h3>
+    
+                <div class="contenido-diferenciales">
+                    <ul class="lista-diferenciales">
+                        <li class="items">Atención personalizada a los clientes</li>
+                        <li class="items">Espacio diferenciado</li>
+                        <li class="items">Localización</li>
+                        <li class="items">Profesionales calificados</li>
+                        <li class="items">Puntualidad</li>
+                        <li class="items">Limpieza</li>
+                    </ul><img src="diferenciales/diferenciales.jpg" class="imagen-diferenciales">
+                    <!-- las tag <u> y <img> deben estar juntas para q el texto quede apegada a la imagen-->
+                </div>
+
+<!--  existe una manera de q el css calcule el tamaño de una pagina 
+    por ejemplo:
+
+    .diferenciales{
+        width: calc(40% - (26px * 4))  tendrá un tamaño del 40%del total menos (26 pixeles * 4  )
+    }    
+-->
+
+
+
+                <div class="video">
+                        <!--  aqui se incorpora el video-->
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/5pOg4LuS-cI?si=_0NDc8UkvyGrJAkJ&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </section>
+                
+        </main>
+        <footer>   <!-- pie de pagina -->
+            <img src="imagenes/logo-blanco.png">
+            <p class="copyright">&copy Copyright Barbería Alura - 2024</p> <!-- el &copy es caracter especial de copyright -->
+
+        </footer>
+    </body>
+
+</html>
